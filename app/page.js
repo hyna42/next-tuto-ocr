@@ -1,4 +1,24 @@
+import  Tag  from "./components/Tag/Tag";
 import styles from "./page.module.css";
+
+const technologies = [
+  "TypeScript",
+  "JavaScript",
+  "React",
+  "Next.js",
+  "Vue.js",
+  "Nuxt.js",
+  "Node.js",
+  // "Express",
+  // "NestJS",
+  // "Wordpress",
+  // "PHP",
+  // "GraphQL",
+  // "PostgreSQL",
+  // "MongoDB",
+  // "Docker",
+  // "Git",
+];
 
 export default function Home() {
   return (
@@ -9,8 +29,8 @@ export default function Home() {
         </h1>
         <p className={styles.heroSubtitle}>Développeur Full-Stack</p>
         <p className={styles.heroDescription}>
-          Je crée des applications web et mobiles modernes, performantes et accessibles
-          avec React, Next.js, Vue.js, Nuxt.js et Node.js,
+          Je crée des applications web et mobiles modernes, performantes et
+          accessibles avec React, Next.js, Vue.js, Nuxt.js et Node.js,
         </p>
         <div className={styles.heroButtons}>
           <a href="#projects" className={`${styles.btn} ${styles.btnPrimary}`}>
@@ -19,6 +39,11 @@ export default function Home() {
           <a href="#contact" className={`${styles.btn} ${styles.btnSecondary}`}>
             Me contacter
           </a>
+          <div className={styles.tagsContainer}>
+             {technologies.map((tech, index) => (
+            <Tag key={index}>{tech}</Tag>
+          ))}
+         </div>
         </div>
       </div>
     </div>

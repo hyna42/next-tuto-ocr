@@ -65,9 +65,9 @@
 }
 
 /* Bouton principal */
-.btnPrimary{
+.btnPrimary {
   background-color: white;
-  color: #364AB0;
+  color: #364ab0;
 }
 
 .btnPrimary:hover {
@@ -84,8 +84,17 @@
 
 .btnSecondary:hover {
   background-color: white;
-  color: #364AB0;
+  color: #364ab0;
   transform: translateY(-2px);
+}
+
+/* Tags */
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 /* Responsive : mobile */
