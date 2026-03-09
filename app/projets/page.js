@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import Tag from "../../components/Tag/Tag";
 import Link from "next/link";
+import projectData from "../../data/projects.json";
 
 export default function Projects() {
   return (
@@ -11,35 +12,34 @@ export default function Projects() {
       </p>
 
       <div className={styles.grid}>
-        <Link href="/projets/portfolio" className={styles.card}>
-          <h2>Portfolio Personnel</h2>
-          <p>Site web moderne construit avec Next.js</p>
-          <div className={styles.tags}>
-            <Tag>Next.js</Tag>
-            <Tag>React</Tag>
-            <Tag>CSS Modules</Tag>
-          </div>
-        </Link>
-
-        <Link href="/projets/ecommerce" className={styles.card}>
-          <h2>App E-commerce</h2>
-          <p>Application de vente en ligne avec panier</p>
-          <div className={styles.tags}>
-            <Tag>React</Tag>
-            <Tag>Node.js</Tag>
-            <Tag>MongoDB</Tag>
-          </div>
-        </Link>
-
-        <Link href="/projets/blog" className={styles.card}>
-          <h2>Blog Technique</h2>
-          <p>Blog personnel sur le développement web</p>
-          <div className={styles.tags}>
-            <Tag>Next.js</Tag>
-            <Tag>Markdown</Tag>
-            <Tag>SEO</Tag>
-          </div>
-        </Link>
+        {projectData.map((project) => (
+          <Link
+            href={`/projets/${project.slug}`}
+            className={styles.card}
+            key={project.id}
+          >
+            {/* TODO fix imag warning */}
+            <div className={styles.imageWrapper}>
+              <img
+                src={project.image}
+                alt={project.title}
+                className={styles.image}
+              />
+            </div>
+            <div className={styles.content}>
+              <h2>{project.title}</h2>
+              <p>{project.shortDescription}</p>
+              <div className={styles.tags}>
+                {project.tags.map((tech, index) => (
+                  <Tag key={index} isDark={true}>
+                    {tech}
+                  </Tag>
+                ))}
+              </div>
+              <div className={styles.viewMore}><span>Voir le projet →</span></div>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );
