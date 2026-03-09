@@ -31,8 +31,9 @@
   transition: color 0.3s ease;
 }
 
-.link:hover {
+.link:hover, .active {
   color: #364AB0;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
