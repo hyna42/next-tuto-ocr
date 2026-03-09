@@ -1,3 +1,4 @@
+import ContactForm from './ContactForm/ContactForm'
 import styles from './page.module.css'
 
 export default function Contact() {
@@ -29,7 +30,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <form className={styles.form}>
+        {/* <form className={styles.form}>
           <div className={styles.formGroup}>
             <label htmlFor="name">Nom</label>
             <input 
@@ -63,7 +64,8 @@ export default function Contact() {
           <button type="submit" className={styles.submitBtn}>
             Envoyer le message
           </button>
-        </form>
+        </form> */}
+        <ContactForm/>
       </div>
     </div>
   )
