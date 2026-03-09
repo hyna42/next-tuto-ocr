@@ -24,12 +24,6 @@ export default function Navigation() {
             </Link>
           </li>
           <li>
-            {/* TODO idee a remplacer par fomation */}
-            <Link href="/formation" className={pathname === '/formation' ? `${styles.link} ${styles.active}` : styles.link}>
-              Formations
-            </Link>
-          </li>
-          <li>
             <Link href="/a-propos" className={pathname === '/a-propos' ? `${styles.link} ${styles.active}` : styles.link}>
               À propos
             </Link>
