@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mon Portfolio
 
-## Getting Started
+Ce projet est un portfolio personnel que j'ai créé en découvrant Next.js. Il présente mes projets, mes compétences et permet de me contacter.
 
-First, run the development server:
+## Technologies utilisées
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js** : Framework React pour le développement web
+- **React** : Bibliothèque JavaScript pour l'interface utilisateur
+- **CSS Modules** : Pour le style des composants
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Déploiement
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Le projet est déployé sur Vercel : [https://next-tuto-ocr-portfolio.vercel.app/](https://next-tuto-ocr-portfolio.vercel.app/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation et exécution en local
 
-## Learn More
+1. Clonez le dépôt :
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone git@github.com:hyna42/next-tuto-ocr.git
+   cd mon-portfolio
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Installez les dépendances :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. Lancez le serveur de développement :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
+
+## Structure du projet
+
+- `app/` : Pages et layout de l'application
+- `components/` : Composants réutilisables (Navigation, Footer, etc.)
+- `data/` : Base de données (projects.json)
+- `public/` : Images et ressources statiques
+
+## Fonctionnalités
+
+- Page d'accueil
+- À propos
+- Projets avec détails individuels
+- Contact avec formulaire
+

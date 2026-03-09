@@ -5,9 +5,10 @@ import projectData from "../../data/projects.json";
 import Image from "next/image";
 
 export const metadata = {
-  title: 'Mes Projets | Portfolio',
-  description: 'Découvrez mes projets de développement web et mobiles : applications React, sites Next.js et plus encore.',
-}
+  title: "Mes Projets | Portfolio",
+  description:
+    "Découvrez mes projets de développement web et mobiles : applications React, sites Next.js et plus encore.",
+};
 
 export default function Projects() {
   return (
@@ -32,7 +33,6 @@ export default function Projects() {
                 className={styles.image}
                 width={800}
                 height={500}
-
               />
             </div>
             <div className={styles.content}>
@@ -45,11 +45,19 @@ export default function Projects() {
                   </Tag>
                 ))}
               </div>
-              <div className={styles.viewMore}><span>Voir le projet →</span></div>
+              <div className={styles.viewMore}>
+                <span>Voir le projet →</span>
+              </div>
             </div>
           </Link>
         ))}
       </div>
     </div>
   );
+}
+
+export function generateStaticParams() {
+  return projectData.map((project) => ({
+    slug: project.slug,
+  }));
 }
