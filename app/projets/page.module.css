@@ -9,7 +9,13 @@
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -20,7 +26,7 @@
 .card h2 {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
-  color: #364AB0;
+  color: #364ab0;
 }
 
 .card p {
