@@ -2,6 +2,12 @@ import styles from "./page.module.css";
 import Tag from "../../components/Tag/Tag";
 import Link from "next/link";
 import projectData from "../../data/projects.json";
+import Image from "next/image";
+
+export const metadata = {
+  title: 'Mes Projets | Portfolio',
+  description: 'Découvrez mes projets de développement web et mobiles : applications React, sites Next.js et plus encore.',
+}
 
 export default function Projects() {
   return (
@@ -20,10 +26,13 @@ export default function Projects() {
           >
             {/* TODO fix imag warning */}
             <div className={styles.imageWrapper}>
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
                 className={styles.image}
+                width={800}
+                height={500}
+
               />
             </div>
             <div className={styles.content}>
